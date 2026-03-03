@@ -13,6 +13,4 @@ app.set("view engine", "ejs");
 
 app.use("/students", studentRoutes);
 
-app.listen(3000, () => {
-  console.log("Server running on http://localhost:3000/students");
-});
+export default app;
