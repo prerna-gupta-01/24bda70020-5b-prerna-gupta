@@ -13,9 +13,9 @@ app.set("view engine", "ejs");
 
 app.use("/students", studentRoutes);
 
-// IMPORTANT: start server
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+app.get("/", (req, res) => {
+  res.redirect("/students");
 });
+
+// DON'T use app.listen for Vercel
+export default app;
